@@ -1,0 +1,87 @@
+<testsuite name="login.Login Check on Sauce Demo page" tests="4" errors="2" failures="2" skipped="0" time="9.902833" timestamp="2023-10-24T15:55:55.427274" hostname="hp-laptop"><testcase classname="login.Login Check on Sauce Demo page" name="Login with various credentials -- @1.1 " status="failed" time="2.805365"><failure type="NoneType" message="None">
+<![CDATA[
+Failing step: And I enter username "" and password "" ... undefined in 0.000s
+Location: features/login.feature:6
+None]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Login with various credentials -- @1.1 
+    Given I launch Chrome browser ... passed in 2.097s
+    When I open Sauce Demo homepage ... passed in 0.709s
+    And I enter username "" and password "" ... undefined in 0.000s
+    Then I should see the error message "Username is required" or I should be logged in successfully ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.Login Check on Sauce Demo page" name="Login with various credentials -- @1.2 " status="failed" time="2.406662"><failure type="NoneType" message="None">
+<![CDATA[
+Failing step: And I enter username "standard" and password "" ... undefined in 0.000s
+Location: features/login.feature:6
+None]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Login with various credentials -- @1.2 
+    Given I launch Chrome browser ... passed in 1.805s
+    When I open Sauce Demo homepage ... passed in 0.601s
+    And I enter username "standard" and password "" ... undefined in 0.000s
+    Then I should see the error message "Password is required" or I should be logged in successfully ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.Login Check on Sauce Demo page" name="Login with various credentials -- @1.3 " status="failed" time="2.594914"><error type="AttributeError" message="'WebDriver' object has no attribute 'find_element_by_id'">
+<![CDATA[
+Failing step: And I enter username "wrong_user" and password "wrong_pass" ... failed in 0.003s
+Location: features/login.feature:6
+Traceback (most recent call last):
+  File "C:\Users\wisni\OneDrive\Pulpit\Automaty\1\venv\Lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "C:\Users\wisni\OneDrive\Pulpit\Automaty\1\venv\Lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\step_definitions.py", line 16, in step_enter_credentials
+    context.driver.find_element_by_id("user-name").send_keys(username)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WebDriver' object has no attribute 'find_element_by_id'
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Login with various credentials -- @1.3 
+    Given I launch Chrome browser ... passed in 2.010s
+    When I open Sauce Demo homepage ... passed in 0.582s
+    And I enter username "wrong_user" and password "wrong_pass" ... failed in 0.003s
+    Then I should see the error message "Username and password do not match" or I should be logged in successfully ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.Login Check on Sauce Demo page" name="Login with various credentials -- @1.4 " status="failed" time="2.095892"><error type="AttributeError" message="'WebDriver' object has no attribute 'find_element_by_id'">
+<![CDATA[
+Failing step: And I enter username "standard_user" and password "secret_sauce" ... failed in 0.002s
+Location: features/login.feature:6
+Traceback (most recent call last):
+  File "C:\Users\wisni\OneDrive\Pulpit\Automaty\1\venv\Lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "C:\Users\wisni\OneDrive\Pulpit\Automaty\1\venv\Lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\step_definitions.py", line 16, in step_enter_credentials
+    context.driver.find_element_by_id("user-name").send_keys(username)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WebDriver' object has no attribute 'find_element_by_id'
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Login with various credentials -- @1.4 
+    Given I launch Chrome browser ... passed in 1.845s
+    When I open Sauce Demo homepage ... passed in 0.249s
+    And I enter username "standard_user" and password "secret_sauce" ... failed in 0.002s
+    Then I should see the error message "" or I should be logged in successfully ... undefined in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

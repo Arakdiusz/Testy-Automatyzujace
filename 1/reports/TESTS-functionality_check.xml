@@ -1,0 +1,27 @@
+<testsuite name="functionality_check.Functionality Check on Sauce Demo page after login" tests="1" errors="1" failures="0" skipped="0" time="2.410535" timestamp="2023-10-24T15:55:40.941326" hostname="hp-laptop"><testcase classname="functionality_check.Functionality Check on Sauce Demo page after login" name="Verify functionality after login" status="failed" time="2.410535"><error type="AttributeError" message="'WebDriver' object has no attribute 'find_element_by_id'">
+<![CDATA[
+Failing step: And I enter username "standard_user" and password "secret_sauce" ... failed in 0.003s
+Location: features/functionality_check.feature:6
+Traceback (most recent call last):
+  File "C:\Users\wisni\OneDrive\Pulpit\Automaty\1\venv\Lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "C:\Users\wisni\OneDrive\Pulpit\Automaty\1\venv\Lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features\steps\step_definitions.py", line 16, in step_enter_credentials
+    context.driver.find_element_by_id("user-name").send_keys(username)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WebDriver' object has no attribute 'find_element_by_id'
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Verify functionality after login
+    Given I launch Chrome browser ... passed in 1.822s
+    When I open Sauce Demo homepage ... passed in 0.585s
+    And I enter username "standard_user" and password "secret_sauce" ... failed in 0.003s
+    Then I should be able to add an item to the cart ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

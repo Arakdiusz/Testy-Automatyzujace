@@ -12,3 +12,4 @@ Feature: Saucedemo login functionality
       | performance_glitch_user | secret |  Username and password do not match any user in this service |
       | incorrect_user | secret_sauce |  Username and password do not match any user in this service |
       | standard_user | wrong_password |  Username and password do not match any user in this service |
+      | standard_user | secret_sauce |""|

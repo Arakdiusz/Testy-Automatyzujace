@@ -1,0 +1,12 @@
+<testsuite name="tittle_chceck.Title Check on Sauce Demo page" tests="1" errors="0" failures="0" skipped="0" time="5.37646" timestamp="2023-10-24T15:56:04.992193" hostname="hp-laptop"><testcase classname="tittle_chceck.Title Check on Sauce Demo page" name="Verify the title of Sauce Demo page" status="passed" time="5.37646"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Verify the title of Sauce Demo page
+    Given I launch Chrome browser ... passed in 2.359s
+    When I open Sauce Demo homepage ... passed in 0.651s
+    Then The title should be "Swag Labs" ... passed in 2.366s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
