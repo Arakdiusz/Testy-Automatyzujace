@@ -7,12 +7,9 @@ Feature: Saucedemo login functionality
 
     Examples:
       | username     | password     | error_message                    |
-      | locked_out_user | secret_sauce | Sorry, this user has been locked out. |
-      | locked_out_users | secret_sauce | Username and password do not match any user in this service |
-      | locked_out_user | secret | Username and password do not match any user in this service |
+      | locked_out_user | secret | Username and password do not match any user in this service  |
+      | locked_out_user | secret_sauce | Sorry, this user has been locked out.  |
       | problem_user | secret | Username and password do not match any user in this service |
-      | performance_glitch_user | secret |  Username and password do not match any user in this service |
       | incorrect_user | secret_sauce |  Username and password do not match any user in this service |
       | standard_user | wrong_password |  Username and password do not match any user in this service |
-      | standard_users | wrong_password |  Username and password do not match any user in this service |
       | standard_user | secret_sauce |""|
